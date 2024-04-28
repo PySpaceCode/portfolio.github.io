@@ -83,14 +83,28 @@
         .py-space-container {
             animation: bounce-in 1s ease-out;
         }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .main-section {
+                padding: 10px;
+            }
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navigation a {
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="main-section">
         <nav class="top-nav navigation">
-            <a >Artificial Intelligence</a>
-            <a >Machine Learning</a>
+            <a>Artificial Intelligence</a>
+            <a>Machine Learning</a>
         </nav>
         <div class="py-space-container">
             <h4 onclick="startCountdown()">PySpace</h4>
@@ -99,8 +113,8 @@
         </div>
 
         <nav class="bottom-nav navigation">
-            <a >Data Science</a>
-            <a >Data Analytics</a>
+            <a>Data Science</a>
+            <a>Data Analytics</a>
         </nav>
 
         <script>
@@ -131,4 +145,5 @@
         </script>
     </div>
 </body>
+
 </html>
