@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Bootstrap Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right top, #10040b, #120b11, #141015, #151415, #121213, #1a1a1d, #1b1d1f, #1d1f21, #1e2122, #1e2223, #1f2424, #212524);
+            color: #ffffff;
+        }
+
+        .right-section {
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 35px;
+            height: 600px;
+            margin-bottom: 20px;
+            background-color: #0c0c0c;
+            /* background-color: orange; */
+            text-align: center;
+        }
+
+        .left-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            animation: scaleImage 5s infinite alternate;
+        }
+
+        @keyframes scaleImage {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left-section,
+            .right-section {
+                padding: 15px;
+            }
+
+            .left-section img {
+                display: none;
+            }
+        }
+
+        .input-group {
+            position: relative;
+            text-align: left; /* Align form fields to the left */
+        }
+
+        .input {
+            border: solid 1.5px #9e9e9e;
+            border-radius: 1rem;
+            background: none;
+            padding: 1rem;
+            font-size: 1rem;
+            color: #f5f5f5;
+            transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            width: 50%; /* Make the input field width 100% */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+
+        .user-label {
+            position: absolute;
+            left: 15px;
+            color: #e8e8e8;
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input:focus,
+        input:valid {
+            outline: none;
+            border: 1.5px solid #1a73e8;
+        }
+
+        .input:focus~label,
+        input:valid~label {
+            transform: translateY(-50%) scale(0.8);
+            background-color: #212121;
+            padding: 0 .2em;
+            color: #2196f3;
+        }
+
+        .btn-12,
+        .btn-12 *,
+        .btn-12 :after,
+        .btn-12 :before,
+        .btn-12:after,
+        .btn-12:before {
+            border: 0 solid;
+            box-sizing: border-box;
+        }
+
+        .btn-12 {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+            Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+            Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 100%;
+            font-weight: 900;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        .btn-12:disabled {
+            cursor: default;
+        }
+
+        .btn-12:-moz-focusring {
+            outline: auto;
+        }
+
+        .btn-12 svg {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .btn-12 [hidden] {
+            display: none;
+        }
+
+        .btn-12 {
+            border-radius: 99rem;
+            border-width: 2px;
+            overflow: hidden;
+            padding: 0.8rem 3rem;
+            position: relative;
+        }
+
+        .btn-12 span {
+            mix-blend-mode: difference;
+        }
+
+        .btn-12:after,
+        .btn-12:before {
+            background: linear-gradient(
+                90deg,
+                #fff 25%,
+                transparent 0,
+                transparent 50%,
+                #fff 0,
+                #fff 75%,
+                transparent 0
+            );
+            content: "";
+            inset: 0;
+            position: absolute;
+            transform: translateY(var(--progress, 100%));
+            transition: transform 0.2s ease;
+        }
+
+        .btn-12:after {
+            --progress: -100%;
+            background: linear-gradient(
+                90deg,
+                transparent 0,
+                transparent 25%,
+                #fff 0,
+                #fff 50%,
+                transparent 0,
+                transparent 75%,
+                #fff 0
+            );
+            z-index: -1;
+        }
+
+        .btn-12:hover:after,
+        .btn-12:hover:before {
+            --progress: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="height: 695px;width: 100%;">
+        <div class="row">
+            <div class="col-md-6 order-md-1 left-section" >
+                <img src="image/register.png" class="img-fluid" alt="Image Carousel">
+            </div>
+            <div class="col-md-6 order-md-1 right-section" >
+                <div class="text-center" >
+                    <p class="welcome-text">Hello new User!<br>Welcome to PySpace</p>
+                    <hr style="background-color : white; width:50%;">
+                </div>
+                <div class="d-flex justify-content-center">
+                <form>
+                    
+                    <div class="input-group ">
+                        <input required="" type="text" name="text" autocomplete="off" class="input d-inline-block w-100">
+                        <label class="user-label">First Name</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input d-inline-block w-100">
+                        <label class="user-label">Last Name</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input d-inline-block w-100">
+                        <label class="user-label">Username</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input d-inline-block w-100">
+                        <label class="user-label">Email</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input d-inline-block w-100">
+                        <label class="user-label">Password</label>
+                    </div>
+                    <br>
+                    <div class="col-md-12 text-center">
+                        <button class="btn-12"><span>Submit</span></button>
+                    </div>
+                    
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

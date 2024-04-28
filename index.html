@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-6L18BCfOfcdCd6ie2GmLr8xZifk5mrsTfqsprqT4C1FVl0YckykuHfjT+qMvj4wQg8zAD8HLJq6Kv0yjSO8dxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+            overflow: hidden; /* Hide scrollbars and prevent scrolling */
+        }
+
+        .main-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url('./image/index.png'); /* Replace with your image URL */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: 200;
+        }
+
+        .navigation a:hover {
+            opacity: 0.7;
+        }
+
+        h4 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        #countdown {
+            display: none;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+
+        #redirect-icon {
+            display: none;
+            color: white;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        /* Bounce animation */
+        @keyframes bounce-in {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .py-space-container {
+            animation: bounce-in 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-section">
+        <nav class="top-nav navigation">
+            <a >Artificial Intelligence</a>
+            <a >Machine Learning</a>
+        </nav>
+        <div class="py-space-container">
+            <h4 onclick="startCountdown()">PySpace</h4>
+            <div id="countdown"></div>
+            <i id="redirect-icon" class="fas fa-external-link-alt"></i>
+        </div>
+
+        <nav class="bottom-nav navigation">
+            <a >Data Science</a>
+            <a >Data Analytics</a>
+        </nav>
+
+        <script>
+            function startCountdown() {
+                var countdownElement = document.getElementById('countdown');
+                var redirectIcon = document.getElementById('redirect-icon');
+                countdownElement.style.display = 'block';
+                var countdownMessages = ["Excellence in Education", "Progress in Learning", "Educational Evolution"];
+                var seconds = 3;
+                var countdown = setInterval(function () {
+                    countdownElement.innerHTML = countdownMessages[3 - seconds];
+                    countdownElement.style.fontSize = '20px'; // Reset font size
+                    setTimeout(function () {
+                        countdownElement.style.fontSize = '30px'; // Zoom in effect
+                    }, 100); // Delay before zoom in
+                    seconds--;
+
+                    if (seconds < 0) {
+                        clearInterval(countdown);
+                        countdownElement.innerHTML = "";
+                        redirectIcon.style.display = 'inline';
+                        setTimeout(function () {
+                            window.location.href = "indexx.html";
+                        }, 1000); // Redirect after 1 second
+                    }
+                }, 1000);
+            }
+        </script>
+    </div>
+</body>
+</html>

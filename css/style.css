@@ -1,0 +1,302 @@
+body{
+    padding:0px;
+    margin:0px;
+  }
+.container-mm
+{
+height: auto;
+width:auto;
+border:1px solid;
+}
+.container-nn
+{
+height:auto;
+width:auto;
+border:1px solid;
+}
+ul li a
+{
+  color:whitesmoke;
+}
+/* Navbar Link Animation on Hover */
+.navbar-nav .nav-item:hover .nav-link {
+  color: #b7dde2; /* Change the link color on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Navbar Link Icons */
+/* CSS code for Navbar */
+
+/* Navbar Link Animation on Hover */
+.navbar-nav .nav-item:hover .nav-link {
+  color: #e4d7d7; /* Change the link color on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Navbar Link Icons */
+.navbar-nav .nav-item .nav-link i {
+  margin-right: 5px; /* Adjust the spacing between the icon and text */
+  font-size: 14px; /* Adjust the icon size as needed */
+  color: #fffafa; /* Icon color */
+  transition: transform 0.3s ease; /* Add animation effect to the icon */
+}
+
+/* Icon animation on hover */
+.navbar-nav .nav-item:hover .nav-link i {
+  transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+}
+/* Styling for the hero section */
+.hero-header {
+  background-color: black;
+  color: gray;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+/* Additional styling for the hero image */
+.hero-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Add hover effect to the image and overlay */
+.hero-img-container:hover .hero-img {
+  transform: scale(1.1);
+}
+
+.hero-img-container:hover .hero-img-overlay {
+  opacity: 1;
+}
+/* Add custom styles here */
+#searchModal {
+  background-color: black;
+}
+
+#searchModal .modal-content {
+  background: rgba(20, 24, 62, 0.7);
+  color: gray;
+}
+
+#searchModal .form-control {
+  color: gray;
+}
+
+#searchModal .btn-light {
+  color: gray;
+}
+
+#searchModal .btn-close {
+  color: gray;
+}
+/* Apply hover effect to the cards */
+.service-section .service-item:hover {
+  background-color: #f5f1f1;
+  color: #080707;
+  transform: translateY(-10px); /* Add a slight upward translation on hover */
+  transition: transform 0.3s ease;
+}
+
+/* Center-align card content */
+.service-section .service-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 20px;
+}
+
+/* Style the section title */
+.service-section .btn-sm {
+  border-color: #000;
+  color: #000;
+  padding: 15px 15px;
+  margin-bottom: 10px;
+}
+
+/* Center align the section title and description */
+.service-section .col-lg-5 {
+  text-align: center;
+}
+
+/* Style the Read More button */
+.service-section .col-lg-5 .btn-primary {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Hover effect for the Read More button */
+.service-section .col-lg-5 .btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Add margin to the top of the Read More button */
+.service-section .col-lg-5 .btn-primary {
+  margin-top: 20px;
+}
+/* Add padding between the cards */
+.service-section .service-item {
+  height: 300px; /* Adjust the desired height */
+  padding: 20px; /* Add padding around each card */
+  text-align: center; /* Center the card content */
+}
+
+/* Center the icons and set their size to 34 pixels */
+.service-section .service-item .service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  margin-bottom: 10px; /* Add some space below the icon */
+}
+
+/* Add animation effect to the buttons */
+.service-section .service-item .btn {
+  transition: transform 0.3s ease;
+}
+
+
+/* Apply hover effect to the buttons */
+.service-section .service-item:hover .btn {
+  transform: translateY(-5px); /* Add a slight upward translation on hover */
+}
+/* Adjust the content section */
+.service-section .col-lg-5 {
+  align-self: flex-start; /* Align content to the top */
+  text-align: left; /* Align text to the left */
+}
+
+/* Center the icons and set their size to 34 pixels */
+.service-section .service-item .service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  margin-bottom: 10px; /* Add some space below the icon */
+}
+/* Feature Section Styles */
+.feature {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+.feature h1 {
+  font-size: 32px; /* Increase heading font size */
+}
+
+.feature p {
+  font-size: 18px; /* Increase paragraph font size */
+}
+
+/* Counter styles */
+.feature .rounded {
+  background: rgba(256, 256, 256, 0.1); /* White background with transparency */
+  color: #fff; /* White text */
+}
+
+.feature .btn-sm-square i {
+  font-size: 34px; /* Increase icon size */
+}
+
+/* Button animation */
+.feature .btn-primary {
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature .btn-primary:hover {
+  transform: scale(1.1); /* Add scale effect on hover */
+}
+/* Custom CSS for the case items */
+.case-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 400px; /* Set the height to auto to match the content height */
+  background-color: rgba(0, 0, 0, 0.7); /* Set the background color with transparency */
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.case-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set the image height to match the card height */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.case-item:hover .case-image {
+  transform: scale(1.1);
+}
+
+.case-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add your custom CSS styles here */
+.team-item {
+  background-color: #fff;
+  border: 2px solid transparent; /* Initial border color */
+  transition: border-color 0.3s;
+}
+
+.team-item:hover {
+  border-color: #fff; /* Border color on hover */
+}
+
+.team-item img {
+  max-width: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.team-item:hover img {
+  transform: scale(1.1); /* Image scale on hover */
+}
+
+.team-item h5 {
+  color: #333;
+}
+
+.team-item small {
+  color: #777;
+}
+
+.team-item a.btn {
+  transition: transform 0.3s;
+}
+
+.team-item:hover a.btn {
+  transform: scale(1.1); /* Button scale on hover */
+}
+
+/* Rest of the CSS styles remain the same */
+
+/* Rest of the CSS styles remain the same */
+

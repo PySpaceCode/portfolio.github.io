@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Sign-in Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right top, #10040b, #120b11, #141015, #161418, #18181b, #1a1a1d, #1b1d1f, #1d1f21, #1e2122, #1e2223, #1f2424, #212524);
+            color: #ffffff;
+        }
+
+        .main-content {
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            margin: 20px auto;
+            background-color: #555555;
+        }
+
+        button[type="submit"] {
+            width: 70%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .login-btn {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            width:60%;
+            height: 50px;
+            margin: 0px auto;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .login-btn.google {
+            background-color: #db4437;
+        }
+
+        .login-btn.linkedin {
+            background-color: #0077b5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input {
+            padding-left: 35px;
+            border-radius: 5px;
+            height: 45px;
+            width: 70%;
+            margin: 0px auto;
+        }
+
+        .icon {
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: none;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .left-section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 40px;
+            background-color: #1c1b1b;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .right-section img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .container-center {
+            height: auto;
+            width: auto;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-6 order-md-2 left-section">
+                <br>
+                <h5 style="font-size: 32px; font-family: 'DM Serif Display', serif; letter-spacing: 3px;">
+                    <b>Sign in to <span style="font-family: 'Hedvig Letters Serif', serif;"><b>PySpace</b></span></b>
+                </h5><br>
+                <div class="login-btn google">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon">
+                    Sign in using Google
+                </div><br>
+                <div class="login-btn linkedin">
+                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
+                    Sign in using LinkedIn
+                </div><br><br>
+                <p style="color: white; font-size: 14px;">_______________&nbsp;Sign in with E-mail&nbsp;____________</p>
+                <br>
+                <form><br>
+                    <div class="group">
+                        <svg style="color: black" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+                            <path d="M22 6l-10 7L2 6" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                        <input class="input form-control" type="email" placeholder="Email or Username">
+                    </div><br>
+                    <div class="group">
+                        <svg style="color: black" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                        <input class="input form-control" type="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+                    <a href="#" class="text-primary">Forgot Password?</a><br><br>
+                    <p class="text-white">Don't have an account yet? <a href="registration1.html" class="text-primary">Sign up</a></p>
+                </form>
+            </div>
+            <div class="col-md-6 order-md-1 right-section">
+                <img src="image/ai_with_predictive_maintenance_illustration-removebg-preview (1).png" height="auto" width="auto" alt="Image Carousel">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

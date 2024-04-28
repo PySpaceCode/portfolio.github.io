@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url('../image/index.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation a {
+    margin: 4rem;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.top-nav a {
+    position: relative;
+    animation: Top-nav 1s ease-out;
+}
+
+.bottom-nav a {
+    position: relative;
+    animation: Bottom-nav 1s ease-out;
+}
+
+.navigation a:hover {
+    opacity: 0.7;
+}
+
+.py-space-container {
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#countdown {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: none;
+    transition: font-size 0.5s ease-in-out; /* Transition effect added */
+}
+
+#redirect-icon {
+    display: none;
+    color: blue;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@keyframes Top-nav {
+    from {
+        top: -4rem;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes Bottom-nav {
+    from {
+        bottom: -5rem;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
